@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home bg-purple-50">
     <header>
       <h1>Zhao Zhao today</h1>
     </header>
@@ -23,9 +23,7 @@
         </ul>
       </div>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
   </div>
 </template>
 
@@ -34,7 +32,7 @@ import { Vue } from "vue-class-component";
 import * as config from "@/config";
 
 export default class Home extends Vue {
-    social = config.social;
-    project = config.project;
+  social = config.social;
+  project = config.project;
 }
 </script>
