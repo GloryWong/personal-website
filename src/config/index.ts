@@ -52,8 +52,8 @@ const social = [
 const project = [
   {
     id: "covid19-xiaogan",
-    label: "孝感新冠疫情",
-    url: "/2019ncov-xiaogan/",
+    label: "Covid19-Xiaogan",
+    url: "https://covid-2019-xg.netlify.app",
     image: "https://i.ibb.co/F4xxhSL/xiaogan-logo-64-64.png",
   },
 ];
