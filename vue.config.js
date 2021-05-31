@@ -5,4 +5,9 @@ module.exports = {
       return args;
     });
   },
+
+  pwa: {
+    name: "Zhao Zhao Today",
+    themeColor: "#B624CE",
+  },
 };
