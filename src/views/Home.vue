@@ -14,7 +14,12 @@
       "
     >
       <div class="w-32 md:w-52">
-        <img class="w-auto" src="@/assets/logo.webp" />
+        <img
+          class="w-auto transition transform"
+          :class="logoTransform ? 'rotate-45' : ''"
+          src="@/assets/logo.webp"
+          @click="logoTransform = !logoTransform"
+        />
       </div>
       <div class="lg:ml-14">
         <h1 class="text-3xl text-gray-50 text-center lg:text-left">
@@ -25,7 +30,7 @@
             <li
               v-for="{ id, label, url, dialog } in social"
               :key="id"
-              class="flex-auto mr-3"
+              class="flex-auto mr-3 leading-8"
             >
               <a
                 v-if="url"
@@ -60,13 +65,18 @@
                 class="
                   flex-col
                   inline-flex
-                  ring-4 ring-purple-300
                   rounded-md
+                  shadow-lg
                   overflow-hidden
+                  transition
+                  ease-in-out
+                  duration-200
+                  transform
+                  hover:scale-110
                 "
               >
-                <div class="w-32 h-40 bg-purple-300"></div>
-                <div class="text-center text-gray-800 bg-purple-100">
+                <div class="h-40 bg-purple-50"></div>
+                <div class="text-center text-gray-800 px-3 py-1">
                   {{ label }}
                 </div>
               </div>
@@ -97,5 +107,6 @@ export default class Home extends Vue {
   project = config.project;
 
   wechatqrVisible = false;
+  logoTransform = false;
 }
 </script>
