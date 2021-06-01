@@ -75,9 +75,9 @@
         </ul>
       </div>
     </main>
-    <footer class="text-center text-gray-500 p-1 lg:p-5">
+    <footer class="text-center text-gray-500 p-1 lg:p-5 text-xs sm:text-base">
       Copyright © {{ new Date().getFullYear() }}. All rights reserved. Host in
-      Netlify
+      Netlify.
     </footer>
   </div>
 </template>
