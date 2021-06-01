@@ -2,10 +2,7 @@ const social = [
   {
     id: "wechat",
     label: "Wechat",
-    action: (): void => {
-      // wcqcVisible = true;
-      return void 0;
-    },
+    dialog: true,
   },
   {
     id: "weibo",

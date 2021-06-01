@@ -23,11 +23,12 @@
         <div class="social text-center lg:text-left">
           <ul class="flex flex-wrap">
             <li
-              v-for="{ id, label, url } in social"
+              v-for="{ id, label, url, dialog } in social"
               :key="id"
               class="flex-auto mr-3"
             >
               <a
+                v-if="url"
                 :href="url"
                 rel="noopener"
                 target="_blank"
@@ -35,10 +36,20 @@
               >
                 {{ label }}
               </a>
+              <button
+                v-else-if="dialog"
+                class="underline text-gray-100 whitespace-nowrap"
+                @click="wechatqrVisible = true"
+              >
+                {{ label }}
+              </button>
             </li>
           </ul>
         </div>
       </div>
+      <Modal v-model="wechatqrVisible" title="Scan QR code to WeChat me">
+        <img class="w-auto" src="@/assets/wechatqrcode.jpeg" />
+      </Modal>
     </header>
     <main class="flex-auto p-3.5 lg:p-8 shadow-inner">
       <div class="project">
@@ -72,11 +83,19 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { Options, Vue } from "vue-class-component";
 import * as config from "@/config";
+import Modal from "@/components/Modal.vue";
 
+@Options({
+  components: {
+    Modal,
+  },
+})
 export default class Home extends Vue {
   social = config.social;
   project = config.project;
+
+  wechatqrVisible = false;
 }
 </script>
