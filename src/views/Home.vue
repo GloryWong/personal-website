@@ -59,7 +59,7 @@
     <main class="flex-auto p-3.5 lg:p-8 shadow-inner">
       <div class="project">
         <ul class="flex flex-wrap">
-          <li v-for="{ id, label, url } in project" :key="id">
+          <li v-for="{ id, label, url } in project" :key="id" class="mr-10">
             <a :href="url" rel="noopener" target="_blank">
               <div
                 class="

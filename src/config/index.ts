@@ -53,6 +53,11 @@ const project = [
     url: "https://covid-2019-xg.netlify.app",
     image: "https://i.ibb.co/F4xxhSL/xiaogan-logo-64-64.png",
   },
+  {
+    id: "gs-demo-cli",
+    label: "GS Demo CLI",
+    url: "https://github.com/GloryWong/gs-cli/tree/master/packages/demo",
+  },
 ];
 
 export { social, project };
