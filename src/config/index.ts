@@ -58,6 +58,11 @@ const project = [
     label: "GS Demo CLI",
     url: "https://github.com/GloryWong/gs-cli/tree/master/packages/demo",
   },
+  {
+    id: "downmp",
+    label: "DownMP",
+    url: "https://github.com/GloryWong/downmp",
+  },
 ];
 
 export { social, project };

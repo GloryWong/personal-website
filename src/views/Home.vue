@@ -73,6 +73,7 @@
                   duration-200
                   transform
                   hover:scale-110
+                  w-40
                 "
               >
                 <div class="h-40 bg-purple-50"></div>
