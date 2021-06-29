@@ -63,6 +63,11 @@ const project = [
     label: "DownMP",
     url: "https://github.com/GloryWong/downmp",
   },
+  {
+    id: "unilog",
+    label: "Unilog",
+    url: "https://github.com/GloryWong/unilog",
+  },
 ];
 
 export { social, project };
