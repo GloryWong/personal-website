@@ -54,9 +54,9 @@ const project = [
     image: "https://i.ibb.co/F4xxhSL/xiaogan-logo-64-64.png",
   },
   {
-    id: "gs-demo-cli",
-    label: "GS Demo CLI",
-    url: "https://github.com/GloryWong/gs-cli/tree/master/packages/demo",
+    id: "Studio",
+    label: "Gloxy Studio",
+    url: "https://github.com/GloryWong/studio",
   },
   {
     id: "downmp",
