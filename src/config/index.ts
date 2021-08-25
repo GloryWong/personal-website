@@ -48,13 +48,18 @@ const social = [
 
 const project = [
   {
+    id: 'pomo',
+    label: 'Pomo',
+    url: 'https://gloxy-pomo.netlify.app/'
+  },
+  {
     id: "covid19-xiaogan",
     label: "Covid19-Xiaogan",
     url: "https://covid-2019-xg.netlify.app",
     image: "https://i.ibb.co/F4xxhSL/xiaogan-logo-64-64.png",
   },
   {
-    id: "Studio",
+    id: "studio",
     label: "Gloxy Studio",
     url: "https://github.com/GloryWong/studio",
   },
