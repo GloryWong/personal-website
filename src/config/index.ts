@@ -50,7 +50,7 @@ const project = [
   {
     id: 'pomo',
     label: 'Pomo',
-    url: 'https://gloxy-pomo.netlify.app/'
+    url: 'https://pomo.zhaozhao.today/'
   },
   {
     id: "covid19-xiaogan",
