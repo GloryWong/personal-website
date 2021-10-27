@@ -48,9 +48,14 @@ const social = [
 
 const project = [
   {
+    id: 'stroop-game',
+    label: 'Stroop Game',
+    url: 'https://stroop-game.zhaozhao.today/'
+  },
+  {
     id: 'pomo',
     label: 'Pomo',
-    url: 'https://gloxy-pomo.netlify.app/'
+    url: 'https://pomo.zhaozhao.today/'
   },
   {
     id: "covid19-xiaogan",
