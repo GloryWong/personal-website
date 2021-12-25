@@ -1,0 +1,141 @@
+:root {
+  --color: deeppink;
+}
+
+body {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.head .title {
+  position: absolute;
+  user-select: none;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 0.125em rgba(0, 255, 255, 0.5);
+}
+.head .title:hover {
+  text-shadow: 0 0 0.125em rgba(0, 255, 255, 1);
+}
+
+.head .wechat {
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+}
+.head .dsc {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -53%);
+  width: 3em;
+  height: 3em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  border: 1px solid currentColor;
+  font-size: 1em;
+}
+.head .wechat img {
+  width: 100%;
+  animation: hueRotate infinite 5s;
+}
+
+@keyframes hueRotate {
+  from {
+    filter: hue-rotate(0deg) drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+  }
+  50% {
+    filter: hue-rotate(180deg) drop-shadow(0 0 6px rgba(255, 255, 255, 1));
+  }
+  to {
+    filter: hue-rotate(360deg) drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  border: 0.125em solid var(--color);
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--color);
+  box-shadow: inset 0 0 0.5em var(--color), 0 0 0.5em var(--color);
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em var(--color);
+  border-radius: 0.25em;
+  padding: 0.25em 1em;
+  position: relative;
+  transition: all 0.1s linear;
+  margin: 0.125em;
+  white-space: nowrap;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color);
+  z-index: -1;
+  box-shadow: 0 0 2em 0.5em var(--color);
+  opacity: 0;
+  transition: inherit;
+}
+
+.button::after {
+  /* content: ''; */
+  display: block;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(2rem);
+  opacity: 0.7;
+}
+
+.button:hover,
+.button:focus {
+  color: black;
+  text-shadow: none;
+}
+
+.button:hover::before,
+.button:hover::after {
+  opacity: 1;
+}
