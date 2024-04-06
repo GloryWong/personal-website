@@ -2,10 +2,14 @@
 </script>
 
 <template>
-  <div class="w-full flex justify-center">
+  <div class="w-full">
     <article
       class="
           prose dark:prose-invert
+
+          prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl
+
+          mx-auto
 
           prose-pre:bg-gray-100
           dark:prose-pre:bg-gray-800
