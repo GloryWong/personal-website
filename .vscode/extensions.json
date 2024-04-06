@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "vue.volar",
+    "nuxtr.nuxtr-vscode"
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "octref.vetur",
+    "hookyqr.beautify",
+    "dbaeumer.jshint",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
+}

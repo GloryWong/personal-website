@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* width or height is sized when flex-grow */
+  .flex-grow-sized {
+    @apply flex-grow min-w-0 min-h-0
+  }
+}
+
