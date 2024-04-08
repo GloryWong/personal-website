@@ -1,8 +1,9 @@
 <script setup lang="ts">
-defineProps<{
-  title?: string
-  src: string
-}>()
+import type { BaseImageProps } from './BaseImage.vue'
+
+type BaseImageDynamicProps = BaseImageProps
+
+const props = defineProps<BaseImageDynamicProps>()
 
 const loaded = ref(false)
 const onLoad = () => loaded.value = true
@@ -11,9 +12,12 @@ const onError = () => failed.value = true
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative overflow-hidden">
     <ClientOnly>
-      <BaseImage class="w-full h-full" :title="title" :src="src" @load="onLoad" @error="onError" />
+      <BaseImage
+        v-bind="props"
+        @load="onLoad" @error="onError"
+      />
     </ClientOnly>
     <BaseMaskMix
       :loading="!loaded" :force-error-mask="failed"

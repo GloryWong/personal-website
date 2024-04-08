@@ -1,3 +1,8 @@
+---
+date: 2024-03-28
+layout: blog
+---
+
 hello [ProseA](https://www.google.com) and [`ProseA`](https://www.google.com)
 
 > ProseBlockquote

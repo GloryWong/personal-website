@@ -6,6 +6,8 @@ const APP_NAME = 'Glory Wong'
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  extends: '@nuxt-themes/typography',
+
   appConfig: {
     appId: pkgJson.name,
     appName: APP_NAME,
@@ -15,8 +17,8 @@ export default defineNuxtConfig({
   },
 
   app: {
-    keepalive: true,
-    layoutTransition: { name: 'blur', mode: 'out-in' },
+    // keepalive: true,
+    // layoutTransition: { name: 'blur', mode: 'out-in' },
     pageTransition: { name: 'blur', mode: 'out-in' },
     head: {
       meta: [
@@ -91,7 +93,7 @@ export default defineNuxtConfig({
   },
 
   content: {
-    // documentDriven: true,
+    documentDriven: true,
     markdown: {
       anchorLinks: true,
     },

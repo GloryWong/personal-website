@@ -32,9 +32,17 @@ useSeoMeta({
   <div>
     <NuxtPwaManifest />
     <NuxtLoadingIndicator />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+
+    <UContainer>
+      <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8 items-center min-h-screen">
+        <AppHeader class="w-full" />
+        <div class="w-full flex-grow">
+          <NuxtPage />
+        </div>
+        <AppFooter />
+      </div>
+    </UContainer>
+
     <UNotifications />
   </div>
 </template>
