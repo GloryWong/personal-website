@@ -26,7 +26,7 @@ const { next, prev } = useContent()
       />
       <div class="flex-grow"></div>
       <UButton
-        v-if="next && next._dir === 'blogs'" icon="i-heroicons-arrow-right-16-solid" variant="ghost"
+        v-if="next && next._dir === 'blogs'" trailing-icon="i-heroicons-arrow-right-16-solid" variant="ghost"
         :to="next._path" :label="next.title"
       />
     </div>
