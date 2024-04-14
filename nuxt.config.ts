@@ -82,6 +82,7 @@ export default defineNuxtConfig({
     'nuxt-security',
     '@morev/vue-transitions/nuxt',
     '@vite-pwa/nuxt',
+    '@nuxthq/studio',
   ],
 
   ui: {
