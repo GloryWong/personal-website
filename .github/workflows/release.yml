@@ -1,0 +1,21 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      # Required permission: github repo => settings => actions => Allow GitHub Actions to create and approve pull requests
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: $null
+          release-type: node

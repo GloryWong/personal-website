@@ -23,23 +23,21 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "husky",
+    "prepare": "pnpm simple-git-hooks",
     "generate-pwa-assets": "pwa-assets-generator",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
-    "commit": "git-cz",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@gloxy/mini-logger": "^0.0.4",
+    "@gloxy/logger": "^2.2.2",
     "ufo": "^1.5.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.13.0",
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
-    "@commitlint/cz-commitlint": "^19.2.0",
+    "@antfu/eslint-config": "^2.24.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@iconify-json/line-md": "^1.1.37",
     "@iconify-json/mdi": "^1.1.66",
     "@morev/vue-transitions": "^3.0.2",
@@ -54,27 +52,24 @@
     "@vite-pwa/nuxt": "^0.6.0",
     "@vitest/coverage-v8": "^1.4.0",
     "@vueuse/nuxt": "^10.9.0",
-    "commitizen": "^4.3.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-perfectionist": "^2.8.0",
+    "eslint": "^9.8.0",
     "happy-dom": "^13.10.1",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.7",
     "nuxt": "^3.11.2",
     "nuxt-security": "1.2.2",
     "sass": "^1.74.1",
+    "simple-git-hooks": "^2.11.1",
     "type-fest": "^4.15.0",
     "vitest": "^1.4.0",
     "vitest-environment-nuxt": "^1.0.0",
     "vitest-fetch-mock": "^0.2.2"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
-  },
   "overrides": {
     "vue": "latest"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm commitlint --edit ${1}",
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
     "*": "pnpm lint:fix"
