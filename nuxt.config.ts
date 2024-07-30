@@ -85,10 +85,6 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
   ],
 
-  ui: {
-    icons: ['mdi', 'line-md'],
-  },
-
   colorMode: {
     preference: 'dark',
   },

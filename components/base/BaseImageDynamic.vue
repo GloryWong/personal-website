@@ -21,7 +21,7 @@ const onError = () => failed.value = true
     </ClientOnly>
     <BaseMaskMix
       :loading="!loaded" :force-error-mask="failed"
-      :error-mask-props="{ iconName: 'i-uil-image-times', iconDynamic: true }" bg-mode="opaque"
+      :error-mask-props="{ iconName: 'i-uil-image-times' }" bg-mode="opaque"
     />
   </div>
 </template>
