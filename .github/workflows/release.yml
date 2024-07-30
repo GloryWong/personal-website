@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,5 +18,5 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
-          token: $null
+          token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
