@@ -50,7 +50,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/nuxt": "^0.9.1",
-    "@vitest/coverage-v8": "^2.0.4",
+    "@vitest/coverage-v8": "^2.0.5",
     "@vueuse/nuxt": "^10.11.0",
     "eslint": "^9.8.0",
     "happy-dom": "^14.12.3",
@@ -60,7 +60,7 @@
     "sass": "^1.77.8",
     "simple-git-hooks": "^2.11.1",
     "type-fest": "^4.23.0",
-    "vitest": "^2.0.4",
+    "vitest": "^2.0.5",
     "vitest-environment-nuxt": "^1.0.0",
     "vitest-fetch-mock": "^0.3.0"
   },
