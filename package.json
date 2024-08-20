@@ -59,7 +59,7 @@
     "nuxt-security": "1.4.3",
     "sass": "^1.77.8",
     "simple-git-hooks": "^2.11.1",
-    "type-fest": "^4.24.0",
+    "type-fest": "^4.25.0",
     "vitest": "^2.0.5",
     "vitest-environment-nuxt": "^1.0.1",
     "vitest-fetch-mock": "^0.3.0"
