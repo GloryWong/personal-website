@@ -53,7 +53,7 @@
     "@vitest/coverage-v8": "^2.0.5",
     "@vueuse/nuxt": "^10.11.1",
     "eslint": "^9.9.0",
-    "happy-dom": "^14.12.3",
+    "happy-dom": "^15.7.4",
     "lint-staged": "^15.2.9",
     "nuxt": "^3.12.4",
     "nuxt-security": "1.4.3",
