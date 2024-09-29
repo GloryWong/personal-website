@@ -51,7 +51,7 @@
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/nuxt": "^0.10.0",
     "@vitest/coverage-v8": "^2.0.5",
-    "@vueuse/nuxt": "^10.11.1",
+    "@vueuse/nuxt": "^11.1.0",
     "eslint": "^9.9.0",
     "happy-dom": "^14.12.3",
     "lint-staged": "^15.2.9",
