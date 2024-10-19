@@ -1,8 +1,8 @@
 {
   "recommendations": [
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx",
     "dbaeumer.vscode-eslint",
-    "vue.volar",
-    "nuxtr.nuxtr-vscode",
     "usernamehw.errorlens",
     "streetsidesoftware.code-spell-checker",
     "antfu.file-nesting"

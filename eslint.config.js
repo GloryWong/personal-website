@@ -2,7 +2,9 @@ import antfu from '@antfu/eslint-config'
 
 // https://eslint.vuejs.org/rules/
 export default await antfu({
+  astro: true,
   rules: {
+    'antfu/no-top-level-await': 'off',
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
@@ -15,13 +17,6 @@ export default await antfu({
       },
     ],
     'node/prefer-global/process': 'off',
-    'vue/html-self-closing': ['warn', {
-      html: {
-        void: 'always',
-        normal: 'never',
-        component: 'always',
-      },
-    }],
   },
   typescript: {
     overrides: {
@@ -32,7 +27,4 @@ export default await antfu({
       }],
     },
   },
-}, {
-  // https://eslint.org/docs/latest/use/configure/configuration-files-new#globally-ignoring-files-with-ignores
-  ignores: ['assets/presets/**'],
 })
