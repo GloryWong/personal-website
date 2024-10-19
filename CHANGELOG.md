@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/GloryWong/personal-website/compare/v1.0.0...v2.0.0) (2024-10-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to Astro (much more performant for SSG)
+
+### Features
+
+* upgrade to Astro (much more performant for SSG) ([7060c7c](https://github.com/GloryWong/personal-website/commit/7060c7cb61290dba8c4b3b1572858374d2316c29))
+
 ## 1.0.0 (2024-07-30)
 
 
