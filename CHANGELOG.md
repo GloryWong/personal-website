@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/GloryWong/personal-website/compare/v2.0.0...v2.0.1) (2024-10-19)
+
+
+### Bug Fixes
+
+* types ([a3fffad](https://github.com/GloryWong/personal-website/commit/a3fffad46a63d9bd68ae0f6642851f422e5e8f5b))
+
 ## [2.0.0](https://github.com/GloryWong/personal-website/compare/v1.0.0...v2.0.0) (2024-10-19)
 
 
