@@ -6,6 +6,9 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://glorywong.com',
+  prefetch: {
+    defaultStrategy: 'viewport',
+  },
   integrations: [
     mdx(),
     sitemap(),
