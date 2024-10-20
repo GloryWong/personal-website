@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/GloryWong/personal-website/compare/v2.1.1...v2.1.2) (2024-10-20)
+
+
+### Bug Fixes
+
+* dark theme switch animation ([5441898](https://github.com/GloryWong/personal-website/commit/5441898fef81b8f922ba9c7fa325c54ebd616ddf))
+
 ## [2.1.1](https://github.com/GloryWong/personal-website/compare/v2.1.0...v2.1.1) (2024-10-20)
 
 
