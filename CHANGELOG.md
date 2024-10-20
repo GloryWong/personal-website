@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/GloryWong/personal-website/compare/v2.0.1...v2.1.0) (2024-10-20)
+
+
+### Features
+
+* update default strategy for prefetch ([75846bc](https://github.com/GloryWong/personal-website/commit/75846bc0a9c73fd134ced4cc0f61597d999b3ade))
+
 ## [2.0.1](https://github.com/GloryWong/personal-website/compare/v2.0.0...v2.0.1) (2024-10-19)
 
 
