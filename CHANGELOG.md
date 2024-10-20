@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/GloryWong/personal-website/compare/v2.1.0...v2.1.1) (2024-10-20)
+
+
+### Bug Fixes
+
+* update link urls and add end slashes ([0072b6b](https://github.com/GloryWong/personal-website/commit/0072b6bf786e1108b460cf13f79e88c95341a11b))
+
 ## [2.1.0](https://github.com/GloryWong/personal-website/compare/v2.0.1...v2.1.0) (2024-10-20)
 
 
