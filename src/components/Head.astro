@@ -157,7 +157,8 @@ function toggleTheme(dark) {
     document.documentElement.classList.remove('dark')
   }
 
-  // window.getComputedStyle(css).opacity
+  // eslint-disable-next-line ts/no-unused-expressions
+  window.getComputedStyle(css).opacity
   document.head.removeChild(css)
 }
 

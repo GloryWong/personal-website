@@ -23,7 +23,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "preview:network": "astro preview --host",
-    "prepare": "pnpm simple-git-hooks",
+    "prepare": "pnpm synctypes && pnpm simple-git-hooks",
     "synctypes": "astro sync",
     "astro": "astro",
     "lint": "eslint .",
