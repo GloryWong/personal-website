@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/GloryWong/personal-website/compare/v2.1.4...v2.2.0) (2024-10-21)
+
+
+### Features
+
+* blog components update ([6117b42](https://github.com/GloryWong/personal-website/commit/6117b4205b8aeb43b3dc5e873e60d9183543ab22))
+
+
+### Bug Fixes
+
+* add the draft flag for posts ([5e19c17](https://github.com/GloryWong/personal-website/commit/5e19c17473cbf3129bd7bc3bb5174fcb528d24ef))
+
 ## [2.1.4](https://github.com/GloryWong/personal-website/compare/v2.1.3...v2.1.4) (2024-10-21)
 
 
