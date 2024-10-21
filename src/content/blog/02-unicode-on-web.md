@@ -1,7 +1,7 @@
 ---
-title: "Unicode On Web"
-description: "Explore the essentials of Unicodee, its evolution from ASCII, and its implementation in web technologies and JavaScript, crucial for software development and web design."
-date: "2024-04-16"
+title: Unicode On Web
+description: Explore the essentials of Unicodee, its evolution from ASCII, and its implementation in web technologies and JavaScript, crucial for software development and web design.
+date: 2024-04-16
 ---
 
 ## What is Unicode?

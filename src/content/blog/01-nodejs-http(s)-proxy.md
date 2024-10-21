@@ -1,7 +1,7 @@
 ---
-title: "Nodejs Http(s) Proxy"
-description: "Master Node.js HTTP(S) proxying with https.Agent, https-proxy-agent, and Node.js 18's fetch API in this concise guide to secure and efficient network requests."
-date: "2024-03-28"
+title: Nodejs Http(s) Proxy
+description: Master Node.js HTTP(S) proxying with https.Agent, https-proxy-agent, and Node.js 18's fetch API in this concise guide to secure and efficient network requests.
+date: 2024-03-28
 ---
 
 In a world where web applications are not isolated islands but interconnected ecosystems, the ability to efficiently manage HTTP and HTTPS requests is paramount. Node.js, with its non-blocking I/O model, has become a go-to environment for building scalable network applications. Yet, even with its robust standard libraries, Node.js does not provide out-of-the-box support for HTTP(S) proxying—a vital feature for navigating through the intricate networks of the modern web. This is where the concept of a proxy comes into play, serving as a gateway or intermediary between the client and the internet at large. In this article, we will explore the intricacies of HTTP(S) proxy implementation in Node.js, delving into the built-in `https.Agent` class, the third-party `https-proxy-agent` module, and the latest advancements introduced by **Node.js version 18**. Join me as we unravel the complexities of connection pooling, request queuing, and the subtle art of custom agent creation to enhance your Node.js networking capabilities.

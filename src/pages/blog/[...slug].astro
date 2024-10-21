@@ -8,7 +8,7 @@ import { type CollectionEntry, getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog'))
-    .filter(post => !post.data.draft)
+    .filter(post => (import.meta.env.PROD ? !post.data.draft : true))
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   return posts.map(post => ({
     params: { slug: post.slug },
@@ -18,17 +18,23 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>
 
 const post = Astro.props
-const { Content } = await post.render();
+const { Content } = await post.render()
+
+// Get the next and prev entries
+const items = (await getCollection('blog'))
+  .filter(post => (import.meta.env.PROD ? !post.data.draft : true))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+const index = items.findIndex(x => x.slug === post.slug)
+const prev = index - 1 >= 0 ? items[index - 1] : null
+const next = index + 1 < items.length ? items[index + 1] : null
 ---
 
 <PageLayout title={post.data.title} description={post.data.description}>
   <Container>
     <div class="animate">
-      <BackToPrev href="/blog/">
-        Back to blog
-      </BackToPrev>
+      <BackToPrev href="/blog/"> Back to blog </BackToPrev>
     </div>
-    <div class="space-y-1 my-10">
+    <div class="space-y-1 my-16">
       <div class="animate flex items-center gap-1.5">
         <div class="font-base text-sm">
           <FormattedDate date={post.data.date} />
@@ -38,12 +44,99 @@ const { Content } = await post.render();
           {readingTime(post.body)}
         </div>
       </div>
-      <div class="animate text-2xl font-semibold text-black dark:text-white">
+      <h1 class="animate text-3xl font-semibold text-black dark:text-white">
         {post.data.title}
+      </h1>
+      <div class="animate">
+        {post.data.description}
       </div>
     </div>
     <article class="animate">
       <Content />
     </article>
+    <div
+      class={`animate mt-12 flex justify-between gap-4${
+        prev ? '' : ' flex-row-reverse'
+      }`}
+    >
+      {
+        prev && (
+          <a
+            href={`/${prev.collection}/${prev.slug}`}
+            class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 blend"
+          >
+            <div class="order-2 w-full h-full group-hover:text-black group-hover:dark:text-white blend">
+              <div class="flex flex-wrap gap-2">
+                <div class="text-sm uppercase">Prev</div>
+              </div>
+              <div class="font-semibold mt-3 text-black dark:text-white">
+                {prev.data.title}
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="order-1 stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-180"
+            >
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+                class="scale-x-0 group-hover:scale-x-100 translate-x-4 group-hover:translate-x-1 transition-all duration-300 ease-in-out"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+                class="translate-x-0 group-hover:translate-x-1 transition-all duration-300 ease-in-out"
+              />
+            </svg>
+          </a>
+        )
+      }
+      {
+        next && (
+          <a
+            href={`/${next.collection}/${next.slug}`}
+            class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+          >
+            <div class="w-full h-full text-right group-hover:text-black group-hover:dark:text-white blend">
+              <div class="text-sm uppercase">Next</div>
+              <div class="font-semibold mt-3 text-black dark:text-white">
+                {next.data.title}
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
+            >
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+                class="scale-x-0 group-hover:scale-x-100 translate-x-4 group-hover:translate-x-1 transition-all duration-300 ease-in-out"
+              />
+              <polyline
+                points="12 5 19 12 12 19"
+                class="translate-x-0 group-hover:translate-x-1 transition-all duration-300 ease-in-out"
+              />
+            </svg>
+          </a>
+        )
+      }
+    </div>
   </Container>
 </PageLayout>
