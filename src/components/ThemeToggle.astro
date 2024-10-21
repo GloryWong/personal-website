@@ -102,7 +102,7 @@
    if (dark) {
      document.documentElement.classList.add('dark')
    }
- else {
+   else {
      document.documentElement.classList.remove('dark')
    }
 
@@ -118,7 +118,7 @@
    if (userTheme === 'system') {
      toggleTheme(window.matchMedia('(prefers-color-scheme: dark)').matches)
    }
- else {
+   else {
      toggleTheme(userTheme === 'dark')
    }
  }

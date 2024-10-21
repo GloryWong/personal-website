@@ -8,9 +8,9 @@ import { getCollection } from 'astro:content'
 import { HOME, SITE, SOCIALS } from '@consts'
 
 const blog = (await getCollection('blog'))
-  .filter(post => !post.data.draft)
+  .filter(post => (import.meta.env.PROD ? !post.data.draft : true))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE)
 
 // const projects = (await getCollection("projects"))
 //   .filter(project => !project.data.draft)
@@ -27,7 +27,6 @@ const blog = (await getCollection('blog'))
 //     return { ...item, Content };
 //   })
 // );
-
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -45,26 +44,24 @@ const blog = (await getCollection('blog'))
               `Music is another major passion of mine. Whether it's Chinese pop, Cantonese melodies, or Hokkien classics, I love immersing myself in the rhythm and even enjoy singing along. It's a great way to unwind and find inspiration.`,
               `In my downtime, you might catch me engrossed in a drama. I'm particularly drawn to crime, political, comedy, and deep, story-driven shows that challenge my perspective and storytelling skills.`,
               `Language is a bridge to new cultures and ideas. I speak Mandarin as my native tongue and am comfortable communicating in English. Currently, I'm taking on the exciting challenge of learning Korean.`,
-              ].map(v => <p class="animate">{v}</p>)
+            ].map(v => <p class="animate">{v}</p>)
           }
         </article>
       </section>
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
-          </h5>
-          <Link href="/blog/">
-            See all posts
-          </Link>
+          <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
+          <Link href="/blog/"> See all posts </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {blog.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
-          ))}
+          {
+            blog.map(post => (
+              <li>
+                <ArrowCard entry={post} />
+              </li>
+            ))
+          }
         </ul>
       </section>
 
@@ -116,26 +113,33 @@ const blog = (await getCollection('blog'))
       </section> -->
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
-          Let's Connect
-        </h5>
+        <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
+            If you want to get in touch with me about something or just to say
+            hi, reach out on social media or send me an email.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
-          {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
-              </Link>
-              /
-            </li>
-          ))}
+          {
+            SOCIALS.map(SOCIAL => (
+              <li class="flex gap-x-2 text-nowrap">
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+                /
+              </li>
+            ))
+          }
           <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+            <Link
+              href={`mailto:${SITE.EMAIL}`}
+              aria-label={`Email ${SITE.NAME}`}
+            >
               {SITE.EMAIL}
             </Link>
           </li>
