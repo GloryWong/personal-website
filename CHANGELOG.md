@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/GloryWong/personal-website/compare/v2.1.2...v2.1.3) (2024-10-21)
+
+
+### Bug Fixes
+
+* toggle theme ([883d549](https://github.com/GloryWong/personal-website/commit/883d5493546618cc8efec2df386f15afb3d4f039))
+
 ## [2.1.2](https://github.com/GloryWong/personal-website/compare/v2.1.1...v2.1.2) (2024-10-20)
 
 
