@@ -9,6 +9,15 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: 'viewport',
   },
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: 'vitesse-light',
+        dark: 'monokai',
+      },
+      wrap: true,
+    },
+  },
   integrations: [
     mdx(),
     sitemap(),
