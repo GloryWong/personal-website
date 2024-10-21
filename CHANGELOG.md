@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.4](https://github.com/GloryWong/personal-website/compare/v2.1.3...v2.1.4) (2024-10-21)
+
+
+### Bug Fixes
+
+* themeToggle bg ([b8263ac](https://github.com/GloryWong/personal-website/commit/b8263acae464968af83378c6560434a5ca70c21b))
+* themeToggle cursor pointer ([36a84c6](https://github.com/GloryWong/personal-website/commit/36a84c6838a4a2a381a9766371cd4dcf00a9691a))
+
 ## [2.1.3](https://github.com/GloryWong/personal-website/compare/v2.1.2...v2.1.3) (2024-10-21)
 
 
