@@ -63,11 +63,3 @@ article {
 .animate.show {
   @apply opacity-100 translate-y-0;
 }
-
-html #back-to-top {
-  @apply opacity-0 pointer-events-none;
-}
-
-html.scrolled #back-to-top {
-  @apply opacity-100 pointer-events-auto;
-}

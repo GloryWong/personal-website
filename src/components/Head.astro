@@ -81,13 +81,13 @@ const { title, description, image = '/og-image.png' } = Astro.props
 </script>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
-    const animateElements = document.querySelectorAll('.animate')
-
-    animateElements.forEach((element, index) => {
+document.addEventListener('astro:page-load', () => {
+  document
+    .querySelectorAll('.animate')
+    .forEach((element, index) => {
       setTimeout(() => {
         element.classList.add('show')
       }, index * 150)
     })
-  })
+})
 </script>

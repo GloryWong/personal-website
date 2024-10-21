@@ -23,6 +23,15 @@
 </button>
 
 <script>
+ function onScroll() {
+   if (window.scrollY > 0) {
+     document.documentElement.classList.add('scrolled')
+   }
+ else {
+     document.documentElement.classList.remove('scrolled')
+   }
+ }
+
  document.addEventListener('astro:page-load', () => {
    const backToTop = document.getElementById('back-to-top')
    backToTop?.addEventListener('click', (event) => {
@@ -33,13 +42,19 @@
      })
    })
 
-   document.addEventListener('scroll', () => {
-     if (window.scrollY > 0) {
-       document.documentElement.classList.add('scrolled')
-     }
- else {
-       document.documentElement.classList.remove('scrolled')
-     }
-   })
+   document.addEventListener('scroll', onScroll)
+   onScroll()
  })
+
+ onScroll()
 </script>
+
+<style>
+  html #back-to-top {
+    @apply opacity-0 pointer-events-none;
+  }
+
+  html.scrolled #back-to-top {
+    @apply opacity-100 pointer-events-auto;
+  }
+</style>
