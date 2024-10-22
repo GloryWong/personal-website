@@ -12,6 +12,9 @@ const blog = (await getCollection('blog'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE)
 
+// eslint-disable-next-line no-unused-expressions
+blog
+
 // const projects = (await getCollection("projects"))
 //   .filter(project => !project.data.draft)
 //   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -27,6 +30,7 @@ const blog = (await getCollection('blog'))
 //     return { ...item, Content };
 //   })
 // );
+
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
