@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.1](https://github.com/GloryWong/personal-website/compare/v2.2.0...v2.2.1) (2024-10-22)
+
+
+### Bug Fixes
+
+* astro check ([3d129c4](https://github.com/GloryWong/personal-website/commit/3d129c4076abcaf2fd1255d5f0bc015ec9962a65))
+* support external links for md ([1498c5d](https://github.com/GloryWong/personal-website/commit/1498c5d9f29c478dfd8a46e181dcb52cb3e219ed))
+* update code theme ([d732c29](https://github.com/GloryWong/personal-website/commit/d732c29bfd61f7df90bd6af4550911aa657d2abe))
+
 ## [2.2.0](https://github.com/GloryWong/personal-website/compare/v2.1.4...v2.2.0) (2024-10-21)
 
 
