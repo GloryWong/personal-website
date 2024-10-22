@@ -1,6 +1,6 @@
 ---
 title: Unicode On Web
-description: Explore the essentials of Unicodee, its evolution from ASCII, and its implementation in web technologies and JavaScript, crucial for software development and web design.
+description: Explore the essentials of Unicode, its evolution from ASCII, and its implementation in web technologies and JavaScript, crucial for software development and web design.
 date: 2024-04-16
 ---
 
@@ -68,25 +68,25 @@ Despite the widespread use of UTF-8 for file encoding, JavaScript internally ope
 
 ### JavaScript String Operations and Unicode
 
-- Character Access: JavaScript's string indexing (`string[index]`) and [`.charAt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) methods return a character at the index based on UTF-16 code units. For characters represented by two code units (surrogate pairs), these methods will return incomplete characters.
+- Character Access: JavaScript's string indexing (`string[index]`) and [`.charAt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) methods return a character at the index based on UTF-16 code units. For characters represented by two code units (surrogate pairs), these methods will return an incomplete character.
 
 ```js
 const string = 'Hi👍' // Character escapes: '\u0048\u0069\ud83d\udc4d'
 
 const h = string[0] // Retrieve the character 'H' (the first unit '\u0048'), because 'H' is encoded to one single unit of UTF-16
-const i = string[0] // Similarly, retrieve the character 'i' (the second unit '\u0069')
-const e = string[2] // The result is not we expected character 👍. Instead, we retrieved the third unit escape '\ud83d', which is the first half of a pair of escapes of 👍.
-const emoji = string[2] + string[3] // Concatenating the two units in sequence, we retrieved the complete emoji 👍 ('\ud83d\udc4d').
+const i = string[1] // Similarly, retrieve the character 'i' (the second unit '\u0069')
+const e = string[2] // The result is not we expected character 👍. Instead, the third unit escape '\ud83d' is retrieved, which is the first half of a pair of escapes of 👍.
+const emoji = string[2] + string[3] // Concatenating the two units in sequence, the complete emoji 👍 ('\ud83d\udc4d') is retrieved.
 
-// `.charAt()` behaves the same as direct indexing, it may not return the correct character, instead, the unit of the indexed position:
+// `.charAt()` behaves the same as direct indexing, it may not return the correct character, however, the unit of the indexed position:
 const e1 = string.charAt(3) // '\udc4d'
 ```
 
-[`.charCodeAt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) behaves similarly to indexing and `.charAt()`, however, it returns the UTF-16 code at the specified index:
+[`.charCodeAt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) behaves similarly to indexing and `.charAt()`, however, it returns an integer between 0 and 65535 representing the UTF-16 code unit at the specified index:
 
 ```js
 const string = 'Hi👍' // Character escapes: '\u0048\u0069\ud83d\udc4d'
-const e1 = string.charCodeAt(3) // Got UTF-16 code 56397
+const e1 = string.charCodeAt(3) // Got an integer 56397
 const e2 = e1.toString(16) // Converted to hexadecimal 'dc4d'
 ```
 
@@ -97,9 +97,9 @@ const e2 = e1.toString(16) // Converted to hexadecimal 'dc4d'
 ```js
 const string = 'Hi👍' // Character escapes: '\u0048\u0069\ud83d\udc4d'
 
-const e1 = string.codePointAt(2) // Got number 128077, which is the Unicode code point of 👍, decoded from 0xd83ddc4d
+const e1 = string.codePointAt(2) // Got an integer 128077, which is the Unicode code point of 👍, decoded from 0xd83ddc4d
 
-// Below we got number 56397 (hexadecimal is 0xdc4d). That doesn't get the correct Unicode code point,
+// Below we got an integer 56397 (hexadecimal is 0xdc4d). That doesn't get the correct Unicode code point,
 // due to being indexed at the second unit of 👍 ('\ud83d\udc4d')
 const e5 = string.codePointAt(3)
 ```
@@ -116,7 +116,7 @@ To accurately count characters, especially when including emojis or other comple
 ```js
 const string = 'Hi👍' // Character escapes: '\u0048\u0069\ud83d\udc4d'
 
-// Fundamentally, `[...string]` split the string to array with its iterator which iterates based on Unicode code points
+// Fundamentally, `[...string]` split the string to an array with its iterator which iterates based on Unicode code points
 const len1 = [...string].length // Got 3
 
 // Below loop prints the 3 single characters: 'H', 'i', and '👍'
