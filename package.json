@@ -39,9 +39,9 @@
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource/inter": "^5.1.0",
     "@fontsource/lora": "^5.1.0",
-    "@playform/compress": "^0.1.4",
+    "@playform/compress": "^0.1.6",
     "@tailwindcss/typography": "^0.5.15",
-    "astro": "^4.16.6",
+    "astro": "^4.16.7",
     "clsx": "^2.1.1",
     "rehype-external-links": "^3.0.0",
     "sharp": "^0.33.5"
