@@ -3,18 +3,20 @@ import Footer from '@components/Footer.astro'
 import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import { SITE } from '@consts'
+import '../styles/global.css'
 
 type Props = {
   title: string
   description: string
 }
 
-const { title, description } = Astro.props;
+const { title, description } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
     <Head title={`${title} | ${SITE.NAME}`} description={description} />
   </head>
   <body>

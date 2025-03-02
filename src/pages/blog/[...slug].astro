@@ -1,10 +1,11 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import BackToPrev from '@components/BackToPrev.astro'
 import Container from '@components/Container.astro'
 import FormattedDate from '@components/FormattedDate.astro'
 import PageLayout from '@layouts/PageLayout.astro'
 import { readingTime } from '@lib/utils'
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog'))
@@ -69,9 +70,9 @@ const next = index + 1 < items.length ? items[index + 1] : null
         prev && (
           <a
             href={`/${prev.collection}/${prev.slug}`}
-            class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 blend"
+            class="group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 blend"
           >
-            <div class="order-2 w-full h-full group-hover:text-black group-hover:dark:text-white blend">
+            <div class="order-2 w-full h-full group-hover:text-black dark:group-hover:text-white blend">
               <div class="flex flex-wrap gap-2">
                 <div class="text-sm uppercase">Prev</div>
               </div>
@@ -88,7 +89,7 @@ const next = index + 1 < items.length ? items[index + 1] : null
               stroke-width="2.5"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="order-1 stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-180"
+              class="order-1 stroke-current group-hover:stroke-black dark:group-hover:stroke-white rotate-180"
             >
               <line
                 x1="5"
@@ -109,9 +110,9 @@ const next = index + 1 < items.length ? items[index + 1] : null
         next && (
           <a
             href={`/${next.collection}/${next.slug}`}
-            class="sm:col-start-2 group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+            class="sm:col-start-2 group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 dark:hover:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
           >
-            <div class="w-full h-full text-right group-hover:text-black group-hover:dark:text-white blend">
+            <div class="w-full h-full text-right group-hover:text-black dark:group-hover:text-white blend">
               <div class="text-sm uppercase">Next</div>
               <div class="font-semibold mt-3 text-balance text-black dark:text-white">
                 {next.data.title}
@@ -126,7 +127,7 @@ const next = index + 1 < items.length ? items[index + 1] : null
               stroke-width="2.5"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white"
+              class="stroke-current group-hover:stroke-black dark:group-hover:stroke-white"
             >
               <line
                 x1="5"

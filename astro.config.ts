@@ -1,15 +1,18 @@
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
 import playformCompress from '@playform/compress'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
+
 import rehypeExternalLinks from 'rehype-external-links'
 
 export default defineConfig({
   site: 'https://glorywong.com',
+
   prefetch: {
     defaultStrategy: 'viewport',
   },
+
   markdown: {
     shikiConfig: {
       themes: {
@@ -28,10 +31,14 @@ export default defineConfig({
       ],
     ],
   },
+
   integrations: [
     mdx(),
     sitemap(),
-    tailwind(),
     playformCompress(),
   ],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 })
