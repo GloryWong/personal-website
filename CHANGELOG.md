@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/GloryWong/personal-website/compare/v2.2.3...v2.3.0) (2025-03-02)
+
+
+### Features
+
+* upgrade astro ([f4dcf56](https://github.com/GloryWong/personal-website/commit/f4dcf568194a3c76c90dbd3662c8f41ec21295a6))
+
 ## [2.2.3](https://github.com/GloryWong/personal-website/compare/v2.2.2...v2.2.3) (2025-03-02)
 
 
