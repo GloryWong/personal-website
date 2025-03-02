@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.3](https://github.com/GloryWong/personal-website/compare/v2.2.2...v2.2.3) (2025-03-02)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([0c27a2f](https://github.com/GloryWong/personal-website/commit/0c27a2fb43b3d0e1fa41fca27818f2bbfcec8641))
+* **deps:** update astro monorepo ([282f590](https://github.com/GloryWong/personal-website/commit/282f590eb2082203694dedf12fe77839feae899d))
+
 ## [2.2.2](https://github.com/GloryWong/personal-website/compare/v2.2.1...v2.2.2) (2024-12-15)
 
 
