@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/GloryWong/personal-website/compare/v2.3.0...v2.3.1) (2025-03-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#56](https://github.com/GloryWong/personal-website/issues/56)) ([5b8657b](https://github.com/GloryWong/personal-website/commit/5b8657b19c7454b2c9675b6536f9e5d7916eff8a))
+
 ## [2.3.0](https://github.com/GloryWong/personal-website/compare/v2.2.3...v2.3.0) (2025-03-02)
 
 
