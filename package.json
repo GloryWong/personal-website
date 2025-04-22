@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "type": "module",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "private": true,
   "description": "Glory Wong personal website",
   "author": {
@@ -73,6 +73,9 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": ["pnpm lint:fix", "pnpm astro check"]
+    "*": [
+      "pnpm lint:fix",
+      "pnpm astro check"
+    ]
   }
 }
