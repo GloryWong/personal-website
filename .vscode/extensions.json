@@ -1,11 +1,7 @@
 {
   "recommendations": [
     "astro-build.astro-vscode",
-    "unifiedjs.vscode-mdx",
-    "dbaeumer.vscode-eslint",
-    "usernamehw.errorlens",
-    "streetsidesoftware.code-spell-checker",
-    "antfu.file-nesting"
+    "dbaeumer.vscode-eslint"
   ],
   "unwantedRecommendations": [
     "esbenp.prettier-vscode",
