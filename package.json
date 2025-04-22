@@ -73,6 +73,6 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "pnpm lint:fix && pnpm astro check"
+    "*": ["pnpm lint:fix", "pnpm astro check"]
   }
 }
