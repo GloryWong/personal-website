@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.2](https://github.com/GloryWong/personal-website/compare/v2.3.1...v2.3.2) (2025-05-25)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#64](https://github.com/GloryWong/personal-website/issues/64)) ([97b60a7](https://github.com/GloryWong/personal-website/commit/97b60a71b82f47f517de066de706261802968230))
+* **deps:** update all non-major dependencies ([#66](https://github.com/GloryWong/personal-website/issues/66)) ([a54b605](https://github.com/GloryWong/personal-website/commit/a54b60510b45683a6aef7f1f0e291fc4d28d796b))
+* **deps:** update all non-major dependencies ([#67](https://github.com/GloryWong/personal-website/issues/67)) ([673f0d7](https://github.com/GloryWong/personal-website/commit/673f0d7c15c1d4b83564b05bdb9277c7a437ad1e))
+* **deps:** update all non-major dependencies ([#68](https://github.com/GloryWong/personal-website/issues/68)) ([9242758](https://github.com/GloryWong/personal-website/commit/9242758218c047e9c6fd7d3d531afb730991139c))
+* **deps:** update all non-major dependencies ([#70](https://github.com/GloryWong/personal-website/issues/70)) ([2ad79f1](https://github.com/GloryWong/personal-website/commit/2ad79f19c3563be3e70d030b5b0ca1c1a55d9b93))
+
 ## [2.3.1](https://github.com/GloryWong/personal-website/compare/v2.3.0...v2.3.1) (2025-04-22)
 
 
