@@ -40,8 +40,8 @@
     "@fontsource/lora": "^5.2.6",
     "@playform/compress": "^0.2.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.13.4",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.5",
     "clsx": "^2.1.1",
     "rehype-external-links": "^3.0.0",
     "sharp": "^0.34.3"
@@ -57,7 +57,7 @@
     "lint-staged": "^15.5.2",
     "simple-git-hooks": "^2.13.1",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.12",
+    "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
