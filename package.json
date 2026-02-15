@@ -50,7 +50,7 @@
     "@antfu/eslint-config": "^4.19.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.2",
     "eslint-plugin-astro": "^1.5.0",
     "happy-dom": "^17.6.3",
@@ -59,7 +59,7 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.18"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
