@@ -58,7 +58,7 @@
     "simple-git-hooks": "^2.13.1",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.7"
   },
   "simple-git-hooks": {
