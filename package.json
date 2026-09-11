@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/mdx": "^5.0.6",
+    "@astrojs/mdx": "^8.0.1",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource/inter": "^5.2.8",
@@ -41,7 +41,7 @@
     "@playform/compress": "^0.2.1",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^6.3.7",
+    "astro": "^7.3.2",
     "clsx": "^2.1.1",
     "rehype-external-links": "^3.0.0",
     "sharp": "^0.34.5"
